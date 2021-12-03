@@ -2,7 +2,7 @@
 
 /** time - o(2^n)  space - o(n^2) 
  * Time Complexity is 2^n because in each recurssion we are doubling the array
- * 
+ * Space Complexity is (n) bcz n recurive call stack frame, and for each stack frame it use n elemets(slice part)
 */
 const combination = (elements) => {
     if(elements.length === 0) return [[]];

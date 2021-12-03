@@ -11,8 +11,7 @@ function fib(n){
     return fib(n-1) + fib(n-2)
 }
 
-// console.log(fib(7))
- // console.log(fib(50)) // stack call is 2^50 (1,125,899,906,842,624) 
+//console.log(fib(50)) // stack call is 2^50 (1,125,899,906,842,624) 
 
 
 // time o(n)  space o(n)
@@ -23,4 +22,4 @@ function fib1(n, memo= {}){
     return memo[n]
 }
 
-console.log(fib1(50))
+console.log(fib1(50)) //12586269025

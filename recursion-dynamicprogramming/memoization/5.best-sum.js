@@ -21,6 +21,15 @@ function bestSum(targerSum, numbers, memo = {}){
 }
 
 // time - o(n^m * m) space - o(m^2)
+// 
+/**
+ * time = o(n^m * m) space - o(m^2)
+ * n = numbers m = target
+ * time - height of the tree will be 'm' which will branch out n(array) for every node so n^m, additionally we will copy remainingresult which is linear which can max be m elements
+ *        so time will be o(n^m * m)
+ * space - max call stack depth will be m and we need to store shortest combination which can be max m
+ *          so space will be o(m^2)
+ */
 function bestSum1(targerSum, numbers){
     if(targerSum === 0) return [];
     if(targerSum < 0) return null
