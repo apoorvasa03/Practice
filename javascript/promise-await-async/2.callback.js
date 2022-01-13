@@ -32,8 +32,7 @@ function createPost(post, callback){
 createPost({type: 'post three', body: 'this is post three'}, getPost)
 
 
-
-/** problem with callback is callback hell, consider u have more async function, ull have more nested function is execute with will end up in creating errors, cant read the programs */
+/** problem with callback is callback hell, consider u have more async function, ull have more nested function is execute with will end up in creating error pron, cant read the programs */
 
 
 
