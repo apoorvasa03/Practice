@@ -5,7 +5,10 @@
 // import Hero, {ErrorBoundary} from './component/error-boundaries/ErrorBoundaries'
 // import UseRefComponent from "./component/useRef/UseRefComponent";
 // import UseMemoComponent from "./component/useMemo-useCallback/useMemoComponent";
-import UseCallbackComponent from "./component/useMemo-useCallback/UseCallbackComponent";
+// import UseCallbackComponent from "./component/useMemo-useCallback/UseCallbackComponent";
+
+import ClickHocCounter from "./component/higher-order-component/ClickHocCounter";
+import HoverHocCounter from './component/higher-order-component/HoverHocCounter'
 function App() {
   return (
     <div className="app">
@@ -25,7 +28,10 @@ function App() {
 
         {/* <UseMemoComponent /> */}
 
-        <UseCallbackComponent />
+        {/* <UseCallbackComponent /> */}
+
+        {/* <ClickHocCounter />
+        <HoverHocCounter/> */}
 
     </div>
   );

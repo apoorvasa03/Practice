@@ -1,5 +1,6 @@
 /** useMemo is to memoize a calculation result between a function's calls and between renders
  * useMemo focuses on avoiding heavy calculation.
+ * This optimization will help for avoiding expensive calculations on each render
  * useMemo should be used when there is a high amount of processing 
  * useMemo had some performance overhead and memory overhead, so use UseMemo only when performance increses in our case
 */
