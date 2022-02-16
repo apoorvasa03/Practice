@@ -1,7 +1,7 @@
 /** HoC is the function that take component as an argument and return new component */
 
 import React, {useState} from "react"
-const higherOrderComponent = OriginalComponent => ({...props}) => {
+const higherOrderComponent1 = OriginalComponent => ({...props}) => {
     let [count, setCount] = useState(0)
 
     const incrementCount = () => {
@@ -10,6 +10,21 @@ const higherOrderComponent = OriginalComponent => ({...props}) => {
     return(
         <OriginalComponent count={count} incrementCount={incrementCount}/>
     )
+}
+
+const higherOrderComponent = OriginalComponent => {
+
+    const Counter = (props) => {
+        let [count, setCount] = useState(0)
+        const incrementCount = () => {
+            setCount(prevCount=> prevCount + 1)
+        }
+        return(
+            <OriginalComponent count={count} incrementCount={incrementCount}/>
+        )
+    }
+    return Counter
+    
 }
 
 const higherOrderComponent2 = WrappedComponent => {

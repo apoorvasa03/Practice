@@ -30,8 +30,8 @@ function App() {
 
         {/* <UseCallbackComponent /> */}
 
-        {/* <ClickHocCounter />
-        <HoverHocCounter/> */}
+        <ClickHocCounter />
+        <HoverHocCounter/>
 
     </div>
   );
