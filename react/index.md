@@ -2,8 +2,11 @@
       React is a front-end and open-source JavaScript library which is useful in developing user interfaces specifically for applications with a single page. It is helpful in building complex and reusable user interface(UI) components of mobile and web applications as it follows the component-based approach.
 2. ### what are the advantages of react?
       1. Use of Virtual DOM to improve efficiency: React uses virtual DOM to render the view. As the name suggests, virtual DOM is a virtual representation of the real DOM. Each time the data changes in a react app, a new virtual DOM gets created. Creating a virtual DOM is much faster than rendering the UI inside the browser. Therefore, with the use of virtual DOM, the efficiency of the app improves.
+
       2. Gentle learning curve: React has a gentle learning curve when compared to frameworks like Angular. Anyone with little knowledge of javascript can start building web applications using React.
+
       3. Reusable components: React uses component-based architecture for developing applications. Components are independent and reusable bits of code. These components can be shared across various applications having similar functionality. The re-use of components increases the pace of development
+
       4. Huge ecosystem of libraries to choose from: React provides you with the freedom to choose the tools, libraries, and architecture for developing an application based on your requirement
 
 3. ### what are the limitation of react ?
@@ -12,7 +15,7 @@
       3. It might be difficult for beginner programmers to understand React.
       4. Coding might become complex as it will make use of inline templating and JSX.
 
-4. ## how diffing algorithm works? 
+4. ### how diffing algorithm works? 
       React implements a heuristic/diffing O(n) algorithm based on two assumptions
       1. Two elements of different types will produce different trees.
       2. The developer can hint which child elements may be stable across different renders with a key prop.
@@ -31,16 +34,51 @@
 8. ### When to use a Class Component over a Function Component?
       If the component needs *state or lifecycle methods* then use class component otherwise use function component.
       *However, from React 16.8 with the addition of Hooks, you could use state , lifecycle  methods and other features that were only available in class component right in your function component.*
-      *So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries *
+      *So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries*
 
 9. ### What is the virtual DOM? How does react use the virtual DOM to render the UI?
       1. virtual DOM is a concept where a virtual representation of the real DOM is kept inside the memory and is synced with the real DOM by a library such as ReactDOM.
-      
+
       2. why virtual DOM was introduced ? DOM manipulation is an integral part of any web application, but DOM manipulation is quite slow when compared to other operations in JavaScript. The efficiency of the application gets affected when several DOM manipulations are being done. Most JavaScript frameworks update the entire DOM even when a small part of the DOM changes.
       For example, consider a list that is being rendered inside the DOM. If one of the items in the list changes, the entire list gets rendered again instead of just rendering the item that was changed/updated. This is called inefficient updating.
       To address the problem of inefficient updating, the react team introduced the concept of virtual DOM.
 
-      3. React uses two virtual DOMs to render the user interface. One of them is used to store the current state of the objects and the other to store the previous state of the objects. Whenever the virtual DOM gets updated, react compares the two virtual DOMs and gets to know about which virtual DOM objects were updated. After knowing which objects were updated, react renders only those objects inside the real DOM instead of rendering the complete real DOM. This way, with the use of virtual DOM, react solves the problem of inefficient updating
+      3. React uses two virtual DOMs to render the user interface. One of them is used to store the current state of the objects and the other to store the previous state of the objects. Whenever the virtual DOM gets updated, react compares the two virtual DOMs and gets to know about which virtual DOM objects were updated. After knowing which objects were updated, react renders only those objects inside the real DOM instead of rendering the complete real DOM. This way, with the use of virtual DOM, react solves the problem of inefficient updating.
+
+10. ### What are the differences between controlled and uncontrolled components ?
+      1. Controlled component: In a controlled component, the value of the input element is controlled by React. We store the state of the input element inside the code, and by using event-based callbacks, any changes made to the input element will be reflected in the code as well.
+
+      2. Uncontrolled component: In an uncontrolled component, the value of the input element is handled by the DOM itself. Whenever the value of the input element is changed, event-based callbacks are not called. Basically, react does not perform any action when there are changes made to the input element.
+      To access the value of the input element of uncontrolled component, we can use ref. ```<input type='file'/>``` is always uncontrolled component.
+
+11. ### What are props in React?
+    *Props* are inputs to components. They are data passed down from a parent component to a child component.
+
+    The primary purpose of props in React is to provide following component functionality:
+
+    1. Pass custom data to your component.
+    2. Trigger state changes.
+
+12. ### What is prop drilling in React?
+      Sometimes while developing React applications, there is a need to pass data from a component that is higher in the hierarchy to a component that is deeply nested. To pass data between such components, we pass props from a source component and keep passing the prop to the next component in the hierarchy till we reach the deeply nested component.
+
+      The disadvantage of using prop drilling is that the components that should otherwise be not aware of the data have access to the data.
+
+13. ### What is React Hooks?
+      React Hooks are the built-in functions that permit developers for using the state and lifecycle methods within React components. These are newly added features made available in React 16.8 version. Each lifecycle of a component is having 3 phases which include mount, unmount, and update. Along with that, components have properties and states. 
+      Using Hook, all features of React can be used without writing class components
+
+14. ### Explain React Hooks?
+     Hooks are functions that let us “hook into” React state and lifecycle features from a functional component.
+
+15. ### What are the rules that must be followed while using React Hooks?
+      There are 2 rules which must be followed while you code with Hooks:
+      1. React Hooks must be called only at the top level. It is not allowed to call them inside the nested functions, loops, or conditions.
+      2. It is allowed to call the Hooks only from the React Function Components.
+
+16. ### What is the use of useEffect React Hooks?
+
+
 
 7. ### What are Pure Components?
 
@@ -74,22 +112,7 @@
     }
     ```
 
-    State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any other component til the owner component decides to pass it.
-
-
-    
-9. ### What are props in React?
-
-    *Props* are inputs to components. They are single values or objects containing a set of values that are passed to components on creation. They are data passed down from a parent component to a child component.
-
-    The primary purpose of props in React is to provide following component functionality:
-
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-
- 1. ### What is Virtual DOM in React?  
-
-        The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation. ... They may also be considered a part of “virtual DOM” implementation in React
+    State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any other component til the owner component decides to pass it.  
 
  2. ### Explain react lifecycle methods  
       Mounting  – componentDidMount(), render(), getDerivedStateFromProps()
@@ -130,17 +153,13 @@
  4. ### how does the single page application works (SPA)   
       The SPA is a web application that interacts with the user by dynamically rewriting the current page, rather than loading entire new pages from the server. The main advantage of a single-page application is its speed 
 
- 5. ### what are props       
-    Props are inputs to components, They are data passed down from a parent component to a child component
+
 
  6. ### what are states
       State of a component is an object that holds some information that may change over the lifetime of the component
 
   7. ### What is the difference between state and props?
       Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
-
-  8. ### what are keys in react ?
-      Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
 
   8. ### what are Redux ? 
          1. redux is the open source javascript library for state management. 
