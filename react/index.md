@@ -78,6 +78,8 @@
 
 16. ### What is the use of useEffect React Hooks?
 
+17. ### What are the different ways to style a React component?
+
 
 
 7. ### What are Pure Components?

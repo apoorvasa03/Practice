@@ -37,4 +37,24 @@ function App() {
   );
 }
 
+
+class ClassRoom {
+  constructor(){
+    this.state = {studentCount: 0}
+  }
+ 
+  
+  addStudent(){
+    this.setState((prev)=> {
+      return {studentCount : ++ prev.studentCount}
+    })
+  }
+
+  render(){
+  return <div>
+    <button onClick={this.addStudent}>Add Student</button>
+  </div>
+  }
+}
+
 export default App
