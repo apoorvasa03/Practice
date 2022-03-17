@@ -6,9 +6,10 @@
 // import UseRefComponent from "./component/useRef/UseRefComponent";
 // import UseMemoComponent from "./component/useMemo-useCallback/useMemoComponent";
 // import UseCallbackComponent from "./component/useMemo-useCallback/UseCallbackComponent";
+// import ClickHocCounter from "./component/higher-order-component/ClickHocCounter";
+// import HoverHocCounter from './component/higher-order-component/HoverHocCounter';
+import TodoReducer from "./component/useReducer/TodoReducer/TodoReducer";
 
-import ClickHocCounter from "./component/higher-order-component/ClickHocCounter";
-import HoverHocCounter from './component/higher-order-component/HoverHocCounter'
 function App() {
   return (
     <div className="app">
@@ -30,31 +31,15 @@ function App() {
 
         {/* <UseCallbackComponent /> */}
 
-        <ClickHocCounter />
-        <HoverHocCounter/>
+        {/* <ClickHocCounter />
+        <HoverHocCounter/> */}
+
+        <TodoReducer/>
 
     </div>
   );
 }
 
 
-class ClassRoom {
-  constructor(){
-    this.state = {studentCount: 0}
-  }
- 
-  
-  addStudent(){
-    this.setState((prev)=> {
-      return {studentCount : ++ prev.studentCount}
-    })
-  }
-
-  render(){
-  return <div>
-    <button onClick={this.addStudent}>Add Student</button>
-  </div>
-  }
-}
 
 export default App
