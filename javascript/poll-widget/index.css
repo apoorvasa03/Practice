@@ -1,0 +1,67 @@
+.body{
+    background-color: pink;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.poll{
+     width: 400px;
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0px 0px 20px 15px rgba(35, 30, 128, .05);
+}
+
+.poll .question{
+    padding: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.poll .answers {
+    padding: 20px, 20px, 10px
+}
+
+.poll .answers .answer {
+    position: relative;
+    width: 90%;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    color: #111;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+
+
+}
+
+.poll .answers .answer.selected{
+    border: 2px solid rgb(231, 81, 231)
+}
+
+.poll .answers .answer span.percentage-value{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 40px;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+
+.poll .answers .answer span.percentage-bar{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 0%;
+    height: 100%;
+    background: rgb(226, 142, 226);
+    z-index: -1;
+    transition: width 300ms ease-in-out; 
+}
