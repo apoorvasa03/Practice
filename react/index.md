@@ -179,5 +179,47 @@
       1.  we can use "reslative units" for meausrement like '%, VW, VH, rem' all this size are relative to the broswer/page   
 
 
+  11. when to use redux
+      when user update the state in one part of the application which should be immideialty undated in other part of UI, in most complex senario data can be changed bcz of network request and backgroud task, in such sutiation data can flow from one part of ui to another and change in unpredictable ways. we have to write lots of code to maintain everything in sync, if anything goes wrong, we difference to know how the data chnaged and where it come from  is complex.
+      for such sutiation we nneed state managemnet : (redux, mobX)  
+
+      
+
+      *`Redux`*: 1. centralize the application state.
+            2. make the data flow transparent and predictable(redux dev tool which is extension to chrome help to debbug the redux).
+            3. easy debugging
+            4. preseve page state
+            5. undo/redo
+
+            Disadvantage of Redux: 
+            1. Complexity: Redux is based on function programming principles, which will be new to many developers
+            2. verbosity: we need to write some boiler code to get thing done, which is the main complain in redux
+
+      *`Log Rocket`*: helps you fix bugs and understand user behavior by capturing logs and session recordings from your web and native mobile apps   
+
+
+  12. when to not use redux ?
+      1.  when application is small- mid size app
+      2.  simple ui/data flow   
+      3. static data   
+
+  13. what is functional programming
+        function programming is about composing the problem into banch of small reusable functions that take input and return the result, they dont mutate/ change the data
+        *`Advantages`*: 1. More concise
+                        2. Easier to debug
+                        3. easy to test
+                        4. mr\ore scalable
+
+14. What is Higher order function?
+        the function which take function as arument or return the function or do both is called HOF
+
+15. Currying?
+
+16. Redux life cycle?
+    when the user performce an action, lets they add item to shooping cart,we create a action object and dispatch it, store has dispatch method which take the action , it will then forward this action to reducer, reducer computes the new state and returns it to store, store will set the state internally and notify the UI component about the update, UI component will pull out the updated data and refreshs themself
+
+
+
+
     
    
