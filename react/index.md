@@ -169,7 +169,12 @@
          3. its provides consistent data across the application which make complex application easier
          4. with redux dev tool debugging is easier
 
-  9. ### explain redux lifecycle ? 
+    8. ### What is reducers? How it works? How it is built. -Ans: It built on Pure functions. ?        
+  In Redux, a reducer is a pure function that takes an action and the previous state of the application and returns the new state. The action describes what happened and it is the reducer's job to return the new state based on that action
+  9. ### Accessibilty? 
+      1. for tab to work for custom component, go to the custom component page and for root div add 'role = button(if the custom compoent is button)' and tabIndex = 0.
+      2. on button click ur triggering the onclick function, but if yuor using div, enter key in key board will not work. for that to work, u need to add 'onKeyPress' and add same click function
+
 
     
    
