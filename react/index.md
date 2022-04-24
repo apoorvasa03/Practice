@@ -175,6 +175,9 @@
       1. for tab to work for custom component, go to the custom component page and for root div add 'role = button(if the custom compoent is button)' and tabIndex = 0.
       2. on button click ur triggering the onclick function, but if yuor using div, enter key in key board will not work. for that to work, u need to add 'onKeyPress' and add same click function
 
+  10. responsive design
+      1.  we can use "reslative units" for meausrement like '%, VW, VH, rem' all this size are relative to the broswer/page   
+
 
     
    
